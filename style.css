@@ -6,6 +6,7 @@
 
 /* common styles */
 
+
 body h1,h2{
     font-family: 'Poppins', sans-serif;
     margin: 0;
@@ -13,49 +14,60 @@ body h1,h2{
 
 /* top banner */
 
-.top-banner:hover{ background-color: tomato;}
+.banner-container:hover{
+    background-color: tomato;
+}
 
-
-.banner-container{ 
-  
+.banner-container{
+    width: 1440px;
+    height: 677px;
+    background-color: #2D25A0;
+    margin-bottom: 70px;
+    
     
 }
 
 .top-banner{
-    background-color: #2D25A0;
-    height: 677px;
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     padding-left: 156px;
-     padding-right: 170px;
-     margin-bottom: 70px;
-    
-    
+    display: flex;
+    justify-content: center;
 
 }
 
+.banner-info{
+    padding-top: 207px;
+    padding-bottom: 240px;
+    padding-left:  156px;
+
+}
 
 h1{
     font-size: 64px;
-    color: white;  
+    color: white;
 }
 
-.link{
+.link a{
     text-decoration: none;
     color: white;
     background-color: #E02C6D;
-    Padding:12px 24px;
-}
-.fas.icon{
-    padding-left: 5px;
+    padding: 10px 24px 10px 24px;
 }
 
-.banner img{
+.link{
+    margin-top: 27px;
+}
+
+.banner-img{
+    padding-top: 153px;
+    padding-bottom: 86px;
+    padding-left: 140px;
+    padding-right: 97px;
+}
+
+.banner-img img{
     width: 556px;
-    height:438px ;
-
+    height: 438px;
 }
+
 
 /* players */
 
@@ -70,7 +82,7 @@ h1{
     width: 330px; 
     height: 454px;
     padding: 15px;
-    box-shadow: 5px 5px 5px 5px gray;  
+    box-shadow: 10px 10px 10px 10px gray;  
 
 }
 
@@ -78,3 +90,50 @@ h1{
 .players img{width: 100%;}
 
 .player-detail{color: gray;}
+
+
+
+ /* footer styles */
+
+.footer-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top:157px;
+}
+
+.footer-logo img{
+    width: 483px;
+    height: 110px;
+}
+
+.icon{
+    margin:4px 7px;
+    padding: 6px;
+    background-color: lightgray;
+    border-radius: 50%;
+}
+ 
+ /* Media Queries */
+
+ /* mobile devices */
+
+ @media only screen and (max-width:688px) {
+
+    .banner-container{width: 100%;}
+
+    .banner-img img{width: 50%;}
+    
+     .player-container{
+         width: 100%;
+         grid-template-columns: repeat(1, 1fr);
+         margin: 0 5px;
+     }
+         
+    
+     
+     .footer-container{}
+
+     .footer-logo img{width: 100%;}
+ }
